@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=DM+Serif+Display&family=Noto+Sans+Glagolitic&family=Oswald:wght@300;400&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #E3E2DF;
+	font-size: 20px;
+	font-family: 'DM Serif Display', serif;
+}
+
+#first-ellipse {
+	width: 120px;
+    height: 120px;
+	fill: #9A1750;
+    stroke-width: 2px;
+    border: #000 solid 4px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    margin-top: 2%;
+	margin-left: 2%;
+}
+
+#background-line {
+	background: #5D001E;
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    margin-top: 1%;
+}
+
+#first-part-of-wheel {
+	border-radius: 50%;
+    border: 30px dashed #5D001E;
+    background: #E3E2DF;
+    width: 700px;
+    height: 700px;
+    margin-top: -10%;
+	margin-left: 23%;
+}
+
+#second-part-of-wheel {
+	border-radius: 50%;
+    border: 10px dashed #5D001E;
+    background: #E3E2DF;
+	width: 680px;
+    height: 680px;
+    margin-top: 0%;
+	margin-left: 0%;
+}
+
+#third-part-of-wheel {
+	border-radius: 50%;
+    border: 2px solid #5D001E;
+    background: #E3E2DF;
+    width: 676px;
+    height: 676px;
+    margin-top: 0%;
+	margin-left: 0%;
+}
+
+/* ===== timetable ===== */
+
+#menu {
+	text-align: center;
+	height: 14vh;
+	width: 11vw;
+	position: absolute;
+	margin-top: -30%;
+	margin-left: 16%;
+	left: 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	flex-direction: column;
+}
+
+.menu-button {
+	background-color: #EE4C7C;
+	height: 40px;
+	width: 160px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.25);
+	display: flex;
+	align-items:center;
+	justify-content: center;
+}
+
+.menu-button a {
+	text-decoration: none;
+	color: black;
+}
+
+#timetable-frame {
+	background-color: #B52151;
+	height: 50vh;
+	width: 20vw;
+	border-radius: 30px;
+	text-align: center;
+	padding: 1%;
+	box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	margin-top: -41%;
+	margin-left: 38%;
+	line-height: 45px;
+}
+
+#line-through {
+	height: 3px;
+	width: 16vw;
+	background-color: #EE4C7C;
+	border-radius: 25%;
+	margin-left: 2vw;
+}
+
+#date {
+	font-size: 28px;
+	
+}
+
+#next-timetable-button {
+	background-color: #DD3F6E;
+	width: 8vw;
+	height: 4vh;
+	border: #AC284F solid 2px;
+	border-radius: 10px;
+	position: fixed;
+	margin-top: -14%;
+	margin-left: 39%;
+}
+
+#previous-timetable-button {
+	background-color: #DD3F6E;
+	width: 8vw;
+	height: 4vh;
+	border: #AC284F solid 2px;
+	border-radius: 10px;
+	position: fixed;
+	margin-top: -14%;
+	margin-left: 51%;
+}
+
+#posted-homework {
+	background-color: #EE4C7C;
+	text-align: center;
+	border-radius: 30px;
+	height:50vh;
+	width: 20vw;
+	box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	margin-top: -41%;
+	margin-right: 7%;
+	right: 10%;
+	padding: 1%;
+}
+
+#posted-homework p {
+	display: block;
+	width: 10vw;
+	margin-left: 26%;
+}
+
+/* ===== login ===== */
+
+#login {
+	background-color: #B52151;
+	height: 31vh;
+	width: 26vw;
+	border-radius: 30px;
+	padding: 1%;
+	padding-top: 2%;
+	box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	margin-top: -36%;
+	margin-left: 36%;
+}
+
+.field {
+	font-size: 20px;
+	line-height: 35px;
+	margin-bottom: 10px;
+}
+
+.input {
+	border: gainsboro solid 2px; 
+	border-radius: 10px;
+	width: 20vw;
+	height: 4vh;
+	font-size: 20px;
+	font-family: 'DM Serif Display', serif;
+}
+
+.error {
+	color:red;
+	font-size: 12px;
+}
+
+#submit-login, #reset-login {
+	background-color: #DD3F6E;
+	width: 6vw;
+	height: 4vh;
+	border: #AC284F solid 2px;
+	border-radius: 10px;
+	font-family: 'DM Serif Display', serif;
+	font-size: 18px;
+}
+
+#submit-login {
+	position: fixed;
+	margin-top: -2%;
+	margin-left: 0%;
+}
+
+#reset-login {
+	position: fixed;
+	margin-top: -2%;
+	margin-left: 7%;
+}
+
+/* ===== homework ===== */
+
+#homework {
+	background-color: #B52151;
+	height: 31vh;
+	width: 26vw;
+	border-radius: 30px;
+	padding: 1%;
+	padding-top: 2%;
+	box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	margin-top: -36%;
+	margin-left: 36%;
+}
+
+#homework textarea {
+	background-color: white;
+	border: gainsboro solid 2px; 
+	border-radius: 10px;
+	width: 25vw;
+	height: 14vh;
+	font-size: 14px;
+	font-family: 'DM Serif Display', serif;
+	resize: none;
+	margin-top: 4%;
+	margin-left: 0%;
+}
+
+#set-homework, #reset-homework {
+	background-color: #DD3F6E;
+	width: 6vw;
+	height: 4vh;
+	border: #AC284F solid 2px;
+	border-radius: 10px;
+	font-family: 'DM Serif Display', serif;
+	font-size: 18px;
+}
+
+#set-homework {
+	position: fixed;
+	margin-top: 8%;
+	margin-left: 0%;
+}
+
+#reset-homework {
+	position: fixed;
+	margin-top: 8%;
+	margin-left: 7%;
+}
+

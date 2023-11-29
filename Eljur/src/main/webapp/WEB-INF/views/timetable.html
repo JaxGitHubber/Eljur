@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+	<title>Timetable</title>
+</head>
+
+<body>
+	<div id="first-ellipse"></div>
+	
+	<div id="background-line">
+		
+		<div id="first-part-of-wheel">
+			<div id="second-part-of-wheel">
+				<div id="third-part-of-wheel">
+			
+		        </div>
+		    </div>
+		</div>
+		
+		<div id="menu">
+			<div class="menu-button"><a th:href="@{/}">Today</a></div>
+			<div class="menu-button"><a th:href="@{/login}">Add Homework</a></div>
+	</div>
+
+    <div id="timetable-frame">
+	<p id="date" th:text="${timetable.getDate()}">date</p>
+	<p th:text="${dayOfWeek}">dayOfWeek</p>
+	
+	<div th:each="lesson : ${lessons}">
+		<p th:text="${lesson}">Lesson</p>
+		<div id="line-through"></div>
+	</div>
+	</div>
+	
+	<form th:method="PUT" th:action="@{/previous}">
+		<input type="submit" value="Previous Timetable" id="next-timetable-button"/>
+	</form>
+	
+	<form th:method="PUT" th:action="@{/next}">
+		<input type="submit" value="Next Timetable" id="previous-timetable-button"/>
+	</form>
+
+    <details id="posted-homework">
+		<summary title="${timetable.getHw()}">Homework</summary>
+		<p th:text="${timetable.getHw()}">homework</p>
+	</details>
+	</div>
+	
+ </body>
+
+</html>

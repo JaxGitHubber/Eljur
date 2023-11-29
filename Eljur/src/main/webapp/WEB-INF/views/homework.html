@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Homework</title>
+	<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	
+	<div id="first-ellipse"></div>
+	
+	<div id="background-line">
+		
+		<div id="first-part-of-wheel">
+			<div id="second-part-of-wheel">
+				<div id="third-part-of-wheel">
+			
+		        </div>
+		    </div>
+		</div>
+
+	<form th:method="PATCH" th:action="@{/homework}" th:object="${homework}" id="homework">
+        <p th:text="${timetable.getDate()}">Date</p>
+        
+		<label for="homework">Write homework:</label><br/>
+		<textarea maxlength="250" cols="25" rows="14" th:field="*{homework}" name="homework"></textarea>
+		
+		<br/><br/>
+		<input type="submit" value="Set" id="set-homework"/><input type="Reset" value="Clean" id="reset-homework"/>
+
+	</form>
+	</div>
+
+</body>
+
+</html>

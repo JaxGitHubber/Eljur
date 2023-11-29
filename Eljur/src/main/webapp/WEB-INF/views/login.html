@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	
+	<div id="first-ellipse"></div>
+	
+	<div id="background-line">
+		
+		<div id="first-part-of-wheel">
+			<div id="second-part-of-wheel">
+				<div id="third-part-of-wheel">
+			
+		        </div>
+		    </div>
+		</div>
+
+	<form th:method="PATCH" th:action="@{login}" th:object="${login}" id="login">
+		
+		<div class="field">
+			<label for="adminName">AdminName</label><br />
+		<input type="text" th:field="*{adminName}" minlength="5" maxlength="25" name="adminName" class="input" required/>
+		</div>
+		
+		<div th:if="${#fields.hasErrors('adminName')}" th:errors="*{adminName}"  class="error">AdminName error</div>
+		<br />
+		
+		<div class="field">
+			<label for="password">Password</label><br />
+		<input type="password" th:field="*{password}" minlength="7" maxlength="25" name="password" class="input" required/>
+		</div>
+		
+		<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error">Password error</div>
+		<br /><br />
+		
+		<input type="submit" value="Login" id="submit-login"/><input type="reset" value="Reset" id="reset-login"/>
+
+	</form>
+	
+	</div>
+
+</body>
+
+</html>
